@@ -10,6 +10,7 @@ if not TOKEN:
 
 # Basic intents (message_content not needed for slash commands)
 intents = discord.Intents.default()
+intents.message_content = True
 
 # Choose a command prefix (e.g. '!')
 bot = commands.Bot(command_prefix="/", intents=intents)
