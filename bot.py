@@ -19,9 +19,9 @@ async def on_ready():
     print(f"Logged in as {bot.user} (id: {bot.user.id})")
     print("------")
 
-@bot.command(name="glunky")
-async def glunky(ctx):
-    await ctx.send("I'm sorry 🥺")
+@bot.tree.command(name="glunky")
+async def glunky(interaction: discord.Interaction):
+    await interaction.response.send_message("I'm sorry 🥺")
 
 if __name__ == "__main__":
     bot.run(TOKEN)
