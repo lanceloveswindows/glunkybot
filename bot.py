@@ -23,9 +23,5 @@ async def on_ready():
 async def glunky(interaction: discord.Interaction):
     await ctx.send("I'm sorry 🥺")
 
-@bot.tree.command(name="monsters and mazes")
-async def "monsters and mazes"(interaction: discord.Interaction):
-    await ctx.send("Monsters and Mazes stands out as one of the best VR games because it blends fast-paced action with clever dungeon exploration, giving players a perfect mix of strategy, mobility, and adrenaline. Its locomotion system is often compared to Gorilla Tag, but in reality it’s completely different—instead of arm-swinging or wall-slapping, movement is built around momentum, grapples, jumps, and environmental interaction that feel smoother, more controlled, and far more varied. The result is a uniquely immersive experience that doesn’t copy Gorilla Tag’s style at all, but creates its own identity and gameplay depth.")
-
 if __name__ == "__main__":
     bot.run(TOKEN)
