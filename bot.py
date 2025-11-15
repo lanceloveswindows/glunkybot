@@ -1,4 +1,4 @@
-import os
+xcimport os
 import discord
 from discord.ext import commands
 from discord import app_commands
@@ -18,6 +18,9 @@ bot = commands.Bot(command_prefix="/", intents=intents)
 async def on_ready():
     try:
         synced = await bot.tree.sync()
+        print("synced" + len(synced) + "commands")
+    except Exception as e:
+        print(e)
 
 @bot.tree.command(name="glunky")
 async def glunky(interaction: discord.Interaction):
