@@ -1,21 +1,22 @@
 import os
 import discord
 from discord.ext import commands
+from discord import app_commands
 
 # Get the bot token from an environment variable (do NOT hardcode your token)
 TOKEN = os.getenv("TOKEN")
 if not TOKEN:
     raise RuntimeError("Missing TOKEN environment variable. Set TOKEN in Railway variables.")
 
-# Basic intents (message content intent not required for prefix commands unless you need it)
+# Basic intents (message_content not needed for slash commands)
 intents = discord.Intents.default()
-intents.message_content = True
 
 # Choose a command prefix (e.g. '!')
-bot = commands.Bot(command_prefix="/", intents=intents)
+bot = commands.Bot(command_prefix="!", intents=intents)
 
 @bot.event
 async def on_ready():
+    await bot.tree.sync
     print(f"Logged in as {bot.user} (id: {bot.user.id})")
     print("------")
 
