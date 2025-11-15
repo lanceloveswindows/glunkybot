@@ -48,6 +48,12 @@ async def on_message(message):
     if "bald" in content:
         await message.channel.send("Martin is not bald, he is baldING!")
 
+    if "nadine" in content:
+        await message.channel.send("Luckily, Nadine has fed me in the last week.")
+
+    if "1502" in content:
+        await message.channel.send("Cameron, get up: https://www.youtube.com/watch?v=l47q2EY8Jjs")
+
     # Allows slash commands & prefix commands to keep working
     await bot.process_commands(message)
 
