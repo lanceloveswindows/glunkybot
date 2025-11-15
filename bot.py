@@ -12,15 +12,15 @@ intents = discord.Intents.default()
 intents.message_content = True
 
 # Choose a command prefix (e.g. '!')
-bot = commands.Bot(command_prefix="/", intents=intents)
+bot = commands.Bot(command_prefix="!", intents=intents)
 
 @bot.event
 async def on_ready():
     print(f"Logged in as {bot.user} (id: {bot.user.id})")
     print("------")
 
-@bot.tree.command(name="glunky")
-async def glunky(interaction: discord.Interaction):
+@bot.command(name="glunky")
+async def glunky(ctx):
     await ctx.send("I'm sorry 🥺")
 
 if __name__ == "__main__":
