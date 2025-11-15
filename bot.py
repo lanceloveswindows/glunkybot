@@ -22,9 +22,18 @@ async def on_ready():
     except Exception as e:
         print(e)
 
-@bot.tree.command(name="glunky")
+@bot.tree.command(name="apology", description="Make Glunk apologise for his sins")
 async def glunky(interaction: discord.Interaction):
     await interaction.response.send_message("I'm sorry 🥺")
+
+@bot.tree.command(name="bald", description="Tell Glunk how bald Martin is")
+async def ping(interaction: discord.Interaction):
+    await interaction.response.send_message("Martin is not bald, he is baldING!")
+
+@bot.tree.command(name="say", description="Make Glunk say something")
+async def say(interaction: discord.Interaction, message: str):
+    await interaction.response.send_message(message)
+
 
 if __name__ == "__main__":
     bot.run(TOKEN)
