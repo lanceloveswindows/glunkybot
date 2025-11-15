@@ -34,11 +34,11 @@ async def on_message(message):
     content = message.content.lower()
 
     # Trigger 1
-    if "glunk" or "glunky" in content:
+    if "glunk" in content or "glunky" in content:
         await message.channel.send("I'm sorry 🥺")
 
     # Trigger 2
-    if "bald" or "balding" in content:
+    if "bald" in content or "balding" in content:
         await message.channel.send("Martin is not bald, he is baldING!")
 
     # Allows slash commands & prefix commands to keep working
