@@ -18,10 +18,10 @@ async def on_ready():
     print(f"Logged in as {bot.user} (id: {bot.user.id})")
     print("------")
 
-@bot.command(name="hello")
+@bot.command(name="glunky")
 async def hello(ctx):
     # The fixed response the bot will send when a user types "!hello"
-    await ctx.send("Hello! I'm alive and responding 😊")
+    await ctx.send("I'm sorry 🥺")
 
 if __name__ == "__main__":
     bot.run(TOKEN)
