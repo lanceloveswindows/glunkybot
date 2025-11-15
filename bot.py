@@ -9,6 +9,7 @@ if not TOKEN:
 
 # Basic intents (message content intent not required for prefix commands unless you need it)
 intents = discord.Intents.default()
+intents.message_content = True
 
 # Choose a command prefix (e.g. '!')
 bot = commands.Bot(command_prefix="!", intents=intents)
