@@ -16,9 +16,8 @@ bot = commands.Bot(command_prefix="/", intents=intents)
 
 @bot.event
 async def on_ready():
-    await bot.tree.sync
-    print(f"Logged in as {bot.user} (id: {bot.user.id})")
-    print("------")
+    try:
+        synced = await bot.tree.sync()
 
 @bot.tree.command(name="glunky")
 async def glunky(interaction: discord.Interaction):
