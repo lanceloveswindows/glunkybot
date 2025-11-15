@@ -12,7 +12,7 @@ if not TOKEN:
 intents = discord.Intents.default()
 
 # Choose a command prefix (e.g. '!')
-bot = commands.Bot(command_prefix="!", intents=intents)
+bot = commands.Bot(command_prefix="/", intents=intents)
 
 @bot.event
 async def on_ready():
