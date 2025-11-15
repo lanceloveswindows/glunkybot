@@ -19,7 +19,7 @@ async def on_ready():
     print("------")
 
 @bot.command(name="glunky")
-async def hello(ctx):
+async def glunky(ctx):
     # The fixed response the bot will send when a user types "!hello"
     await ctx.send("I'm sorry 🥺")
 
