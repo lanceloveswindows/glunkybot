@@ -48,6 +48,10 @@ async def on_message(message):
     if "1502" in content or  "get up" in content:
         await message.channel.send("Cameron, get up: https://www.youtube.com/watch?v=l47q2EY8Jjs")
 
+    if "monsters" in content or  "mazes" in content or  "m & m" in content or  "m&m" in content:
+        await message.channel.send("Monsters and Mazes stands out as one of the best VR games because it blends fast-paced action with clever dungeon exploration, giving players a perfect mix of strategy, mobility, and adrenaline. Its locomotion system is often compared to Gorilla Tag, but in reality it’s completely different - instead of arm-swinging or wall-slapping, movement is built around momentum, grapples, jumps, and environmental interaction that feel smoother, more controlled, and far more varied. The result is a uniquely immersive experience that doesn’t copy Gorilla Tag’s style at all, but creates its own identity and gameplay depth.
+")
+
     # Allows slash commands & prefix commands to keep working
     await bot.process_commands(message)
 
